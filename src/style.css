@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 1rem;
+	background-color: #f6f7fa;
+}
+.memberCard {
+	margin: 2rem;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	max-width: 30rem;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	align-items: center;
+	border-radius: 1rem;
+	position: relative;
+	min-height: 22rem;
+	transition: 0.5;
+	overflow: hidden;
+}
+.memberCard:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	transform: translateY(96%) translateX(-50%);
+	left: 50%;
+	display: flex;
+	flex-direction: column;
+	width: 75%;
+	background-color: rgb(218, 218, 218);
+	align-items: center;
+	border-radius: 1rem;
+	opacity: 1;
+	min-height: 22rem;
+	transition: 0.5s ease-in-out;
+}
+.memberCard:hover:after {
+	transform: translateY(0%) translateX(-50%);
+	width: 100%;
+	opacity: 1;
+}
+.memberCard:hover .name {
+	transform: translateY(-140px);
+}
+.memberCard:hover .name > h2 {
+	color: black;
+}
+.memberCard:hover .desc {
+	transform: translateY(-700%);
+	opacity: 1;
+}
+.memberimage {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+}
+
+.memberimage img {
+	max-width: 8rem;
+	border-radius: 50%;
+	width: 100%;
+}
+
+.post {
+	width: 100%;
+	margin: 0rem 2rem;
+	max-width: 15rem;
+	background-color: blue;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	padding: 0.2rem;
+	border-radius: 1rem;
+}
+.post > h4 {
+	padding: 0;
+	margin: 0;
+	font-family: "poppins";
+	color: white;
+}
+
+.name {
+	padding: 5px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	font-size: 1rem;
+	align-items: center;
+	z-index: 9999;
+	text-align: center;
+	transition: all 1s;
+}
+.name > h2 {
+	font-weight: 900;
+	font-family: "poppins";
+	color: white;
+	transition: color 1s;
+}
+
+.insta {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	font-size: 1rem;
+	align-items: center;
+}
+
+.insta > h5 {
+	font-family: "poppins";
+	color: white;
+}
+
+.year {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	font-size: 1rem;
+	align-items: center;
+}
+
+.year > h5 {
+	font-family: "poppins";
+	color: white;
+}
+
+.desc {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	font-size: 0.9rem;
+	align-items: center;
+	opacity: 0;
+	transition: all 1s ease-in-out;
+	transform: translateY(100%);
+	z-index: 9999;
+}
+
+.desc > p {
+	color: rgb(0, 0, 0);
+	font-family: "poppins";
+}
+
+.rec.rec-arrow {
+	border-radius: 0;
+}
+/* round buttons on hover */
+.rec.rec-arrow:hover {
+	border-radius: 50%;
+	background-color: black !important;
+}
+/* hide disabled buttons */
+.rec.rec-arrow:disabled {
+	visibility: hidden;
+}
+/* disable default outline on focused items */
+/* add custom outline on focused items */
+.rec-carousel-item:focus {
+	outline: none;
+	background-color: black !important;
+	box-shadow: inset 0 0 1px 1px lightgrey;
+}
+.rec-carousel-item:focus:enabled {
+	outline: none;
+	background-color: black !important;
+	box-shadow: inset 0 0 1px 1px lightgrey;
+}
+
+.rec-dot_active {
+	box-shadow: 0 0 1px 3px rgb(0 0 0) !important;
+	background-color: rgba(0, 0, 0, 0.5) !important;
+}
